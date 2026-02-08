@@ -1,0 +1,103 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding-top: 80px;
+}
+
+.footer {
+  background: linear-gradient(135deg, var(--primary-darker) 0%, var(--primary-dark) 100%);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.social-link:hover {
+  background: rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Brand-specific colors */
+.social-instagram .social-icon {
+  color: #E4405F;
+}
+
+.social-facebook .social-icon {
+  color: #1877F2;
+}
+
+.social-twitter .social-icon {
+  color: #1DA1F2;
+}
+
+.social-youtube .social-icon {
+  color: #FF0000;
+}
+
+.social-tiktok .social-icon {
+  color: #000000;
+}
+
+.social-linkedin .social-icon {
+  color: #0A66C2;
+}
+
+.social-pinterest .social-icon {
+  color: #E60023;
+}
+
+.social-snapchat .social-icon {
+  color: #FFFC00;
+}
+
+.social-icon {
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+}
+
+.social-text {
+  font-size: 0.95rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 70px;
+  }
+}

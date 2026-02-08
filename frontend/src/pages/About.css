@@ -1,0 +1,644 @@
+.about-page {
+  min-height: calc(100vh - 80px);
+  background-color: var(--bg-light);
+}
+
+.about-content {
+  margin-bottom: 3rem;
+}
+
+.about-card {
+  background-color: var(--white);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.about-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-light);
+  text-align: center;
+}
+
+.contact-section {
+  margin-bottom: 3rem;
+}
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-card {
+  background: rgba(245, 245, 245, 0.85);
+  backdrop-filter: blur(20px) saturate(170%);
+  -webkit-backdrop-filter: blur(20px) saturate(170%);
+  padding: 3rem 2.5rem;
+  border-radius: 0.35em;
+  box-shadow: 0 0 0 0.0625em rgba(200, 200, 200, 0.4),
+              0 0.25em 0.375em -0.0625em rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(200, 200, 200, 0.5);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 0 0.0625em rgba(180, 180, 180, 0.7),
+              0 12px 17px rgba(0, 0, 0, 0.12);
+  border-color: var(--secondary-color);
+}
+
+.contact-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Email Envelope Icon */
+.email-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.email-envelope {
+  width: 70px;
+  height: 50px;
+  position: relative;
+}
+
+.envelope-body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #ffffff 0%, #f0f0f0 100%);
+  border-radius: 4px;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.15),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.05);
+  border: 2px solid var(--primary-color);
+  position: relative;
+}
+
+.envelope-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-top: 25px solid var(--primary-color);
+  z-index: 2;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.envelope-flap::after {
+  content: '';
+  position: absolute;
+  top: -25px;
+  left: -35px;
+  width: 0;
+  height: 0;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-top: 25px solid var(--primary-darker);
+  opacity: 0.3;
+}
+
+/* Location Pin Icon */
+.location-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.location-pin {
+  width: 45px;
+  height: 65px;
+  position: relative;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.pin-top {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow:
+    inset -2px -2px 4px rgba(0, 0, 0, 0.2),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.2);
+}
+
+.pin-top::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.pin-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 20px solid #c0392b;
+}
+
+.contact-card-iphone {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.iphone-frame-small {
+  width: 45px;
+  height: 90px;
+  background: linear-gradient(145deg, #2c2c2e, #1c1c1e);
+  border-radius: 9px;
+  padding: 3px;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.3),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.iphone-notch-small {
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 26px;
+  height: 6px;
+  background: #000;
+  border-radius: 0 0 5px 5px;
+  z-index: 3;
+}
+
+.iphone-notch-small::before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 13px;
+  height: 1.2px;
+  background: #1c1c1e;
+  border-radius: 3px;
+}
+
+.iphone-notch-small::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  right: 3px;
+  width: 2px;
+  height: 2px;
+  background: #1a5f7a;
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(26, 95, 122, 0.8);
+}
+
+.iphone-screen-small {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen-content-small {
+  text-align: center;
+}
+
+.call-icon-small {
+  font-size: 1rem;
+  animation: phoneRing 1s ease-in-out infinite;
+}
+
+.iphone-button-small {
+  position: absolute;
+  right: -0.6px;
+  top: 28px;
+  width: 0.6px;
+  height: 13px;
+  background: linear-gradient(90deg, #2c2c2e, #1c1c1e);
+  border-radius: 0 0.6px 0.6px 0;
+}
+
+.contact-card h3 {
+  color: var(--text-dark);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.contact-card a {
+  color: var(--primary-dark);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.contact-card p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.phone-button {
+  background: none;
+  border: none;
+  color: var(--primary-dark);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0;
+  font-family: inherit;
+}
+
+.phone-button:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.payment-section {
+  margin-bottom: 3rem;
+}
+
+.payment-info-box {
+  background: linear-gradient(135deg, #E3F2FD 0%, #F3E5F5 100%);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px solid rgba(100, 149, 237, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.payment-info-box h3 {
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.payment-methods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.payment-badge {
+  background-color: var(--white);
+  color: #1e88e5;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 2px solid #1e88e5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.payment-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background-color: #1e88e5;
+  color: var(--white);
+}
+
+.cta-section {
+  background-color: var(--white);
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.cta-section h2 {
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.phone-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+}
+
+.phone-popup {
+  background-color: var(--white);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+  animation: slideUp 0.3s ease;
+}
+
+.popup-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--text-light);
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+  transition: color 0.3s ease;
+}
+
+.popup-close:hover {
+  color: var(--text-dark);
+}
+
+.iphone-mockup {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+}
+
+.iphone-frame {
+  width: 90px;
+  height: 180px;
+  background: linear-gradient(145deg, #2c2c2e, #1c1c1e);
+  border-radius: 18px;
+  padding: 6px;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.4),
+    inset 0 0 0 1.5px rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.iphone-notch {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 12px;
+  background: #000;
+  border-radius: 0 0 10px 10px;
+  z-index: 3;
+}
+
+.iphone-notch::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 25px;
+  height: 2px;
+  background: #1c1c1e;
+  border-radius: 8px;
+}
+
+.iphone-notch::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  right: 6px;
+  width: 4px;
+  height: 4px;
+  background: #1a5f7a;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(26, 95, 122, 0.8);
+}
+
+.iphone-screen {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen-content {
+  text-align: center;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.call-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+  animation: phoneRing 1s ease-in-out infinite;
+}
+
+.contact-name {
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.call-status {
+  color: #8e8e93;
+  font-size: 0.5rem;
+}
+
+.iphone-button {
+  position: absolute;
+  right: -1.5px;
+  top: 60px;
+  width: 1.5px;
+  height: 26px;
+  background: linear-gradient(90deg, #2c2c2e, #1c1c1e);
+  border-radius: 0 1.5px 1.5px 0;
+}
+
+@keyframes phoneRing {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  10%, 30% {
+    transform: rotate(-15deg);
+  }
+  20%, 40% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.phone-popup h3 {
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.phone-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 1.5rem 0;
+  letter-spacing: 0.05em;
+}
+
+.popup-note {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-buttons a,
+  .cta-buttons button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .phone-popup {
+    width: 95%;
+    padding: 2rem;
+  }
+
+  .phone-number {
+    font-size: 1.5rem;
+  }
+
+  .iphone-frame {
+    width: 100px;
+    height: 200px;
+    padding: 6px;
+    border-radius: 18px;
+  }
+
+  .iphone-notch {
+    width: 55px;
+    height: 14px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .iphone-screen {
+    border-radius: 14px;
+  }
+
+  .call-icon {
+    font-size: 1.5rem;
+  }
+
+  .contact-name {
+    font-size: 0.65rem;
+  }
+
+  .call-status {
+    font-size: 0.5rem;
+  }
+
+  .iphone-frame-small {
+    width: 40px;
+    height: 80px;
+    padding: 3px;
+    border-radius: 8px;
+  }
+
+  .iphone-notch-small {
+    width: 22px;
+    height: 5px;
+    border-radius: 0 0 4px 4px;
+  }
+
+  .iphone-screen-small {
+    border-radius: 5px;
+  }
+
+  .call-icon-small {
+    font-size: 0.85rem;
+  }
+}

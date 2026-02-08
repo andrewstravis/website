@@ -1,0 +1,315 @@
+.kittens-page {
+  min-height: calc(100vh - 80px);
+  background-color: var(--bg-light);
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.waiting-list-form-container {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin-bottom: 3rem;
+}
+
+.waiting-list-form {
+  max-width: 600px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.btn-submit {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.success-message {
+  color: var(--success);
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.error-message {
+  color: var(--error);
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.kittens-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.no-kittens {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.kitten-card {
+  background: rgba(245, 245, 245, 0.85);
+  backdrop-filter: blur(20px) saturate(170%);
+  -webkit-backdrop-filter: blur(20px) saturate(170%);
+  border-radius: 0.35em;
+  overflow: hidden;
+  box-shadow: 0 0 0 0.0625em rgba(200, 200, 200, 0.4),
+              0 0.25em 0.375em -0.0625em rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(200, 200, 200, 0.5);
+  transition: all 0.3s ease;
+}
+
+.kitten-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 0 0.0625em rgba(180, 180, 180, 0.7),
+              0 12px 17px rgba(0, 0, 0, 0.12);
+  border-color: var(--secondary-color);
+}
+
+.kitten-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background-color: var(--bg-light);
+}
+
+.kitten-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.kitten-details {
+  padding: 1.5rem;
+}
+
+.kitten-details h3 {
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.kitten-info {
+  margin-bottom: 1rem;
+}
+
+.kitten-info p {
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+}
+
+.kitten-description {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.kitten-status {
+  margin-top: 1rem;
+}
+
+.status-available,
+.status-reserved {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.status-available {
+  background: linear-gradient(135deg, #E8F5E9 0%, var(--secondary-light) 50%);
+  color: var(--primary-dark);
+  border: 2px solid var(--success);
+}
+
+.status-reserved {
+  background: linear-gradient(135deg, var(--accent-light) 0%, #FFF3E0 50%);
+  color: var(--text-dark);
+  border: 2px solid var(--accent-color);
+}
+
+.payment-info-box {
+  background: linear-gradient(135deg, #E3F2FD 0%, #F3E5F5 100%);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+  text-align: center;
+  border: 2px solid rgba(100, 149, 237, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.payment-info-box h3 {
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.payment-methods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.payment-badge {
+  background-color: var(--white);
+  color: var(--primary-dark);
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.payment-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.parents-section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.parents-section h2 {
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.parents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.parent-card {
+  background: rgba(245, 245, 245, 0.85);
+  backdrop-filter: blur(20px) saturate(170%);
+  -webkit-backdrop-filter: blur(20px) saturate(170%);
+  border-radius: 0.35em;
+  overflow: hidden;
+  box-shadow: 0 0 0 0.0625em rgba(200, 200, 200, 0.4),
+              0 0.25em 0.375em -0.0625em rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(200, 200, 200, 0.5);
+  transition: all 0.3s ease;
+}
+
+.parent-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 0 0.0625em rgba(180, 180, 180, 0.7),
+              0 12px 17px rgba(0, 0, 0, 0.12);
+  border-color: var(--secondary-color);
+}
+
+.parent-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background-color: var(--bg-light);
+}
+
+.parent-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.parent-details {
+  padding: 1.5rem;
+}
+
+.parent-details h3 {
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.parent-info {
+  margin-bottom: 1rem;
+}
+
+.parent-info p {
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+}
+
+.parent-description {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .kittens-grid,
+  .parents-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(echo:*)",
+      "Bash(.venv/bin/python:*)",
+      "Bash(npm install:*)",
+      "Bash(curl:*)",
+      "Bash(python3:*)",
+      "Bash(node:*)",
+      "Bash(npm:*)",
+      "Bash(find:*)",
+      "Bash(/home/viavi/pycharm-projects/website/backend/venv/bin/pip list:*)",
+      "Bash(du:*)",
+      "Bash(pip install:*)",
+      "Bash(/home/viavi/pycharm-projects/website/backend/venv/bin/pip install:*)",
+      "Bash(/home/viavi/pycharm-projects/website/backend/venv/bin/python:*)",
+      "Bash(npx vite build:*)",
+      "WebSearch",
+      "Bash(pkill:*)",
+      "Bash(fuser -k:*)",
+      "Bash(git init:*)",
+      "Bash(git branch:*)",
+      "Bash(git -C /home/viavi/pycharm-projects/website add -A)",
+      "Bash(git -C /home/viavi/pycharm-projects/website status)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
